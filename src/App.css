@@ -1,5 +1,11 @@
 .App {
+  background: linear-gradient(to left,#e66465, #9198e5);
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .App-logo {
@@ -37,11 +43,52 @@
   }
 }
 
-form {
-  border-style: solid;
-}
-
 #providers {
   color:red;
   border-style: solid;
+}
+
+img {
+  height: 50px;
+}
+
+.auth-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: white;
+  border-style: solid;
+  padding: 2rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+section {
+  position: fixed;
+  bottom: 100px;
+  margin-top: 300px;
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+}
+
+button {
+  border: none;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 4px;
 }
