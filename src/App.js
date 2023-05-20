@@ -2,7 +2,7 @@ import './App.css';
 
 import { useState } from 'react';
 import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import { useAuthState } from 'react-firebase-hooks/auth'
 
 const firebaseConfig = {
@@ -27,11 +27,20 @@ export default function App() {
     <div className="App">
       <nav>
         <img src={require("./assets/logo.png")}/>
+        <NavBar/>
       </nav>
-
       {isLogin ? <br/> : <Login/>}
     </div>
   );
+}
+
+function NavBar() {
+  return (
+    <ul>
+      <li><a href="default.asp">Home</a></li>
+      <button>Click to signin</button>
+    </ul>
+  )
 }
 
 function Login() {
@@ -56,6 +65,11 @@ function Login() {
     //document.write("yes")
   }
 
+  const facebookLogin = () => {
+    const provider = new FacebookAuthProvider();
+    signInWithRedirect(auth,provider);
+  }
+
   //main code
   return (
     <> 
@@ -64,8 +78,11 @@ function Login() {
     <form onSubmit={handleSubmit}>
       <label for="email">email</label>
       <input value={email} type='email' placeholder='youremail@email.com'></input>
+      <br></br>
+      <br></br>
       <label for='password'>password</label>
       <input value={password} type='password' placeholder='password'></input>
+      <br></br>
       <button type='submit'>Login</button>
 
     </form>
@@ -74,11 +91,16 @@ function Login() {
     <br></br>
     <div>or</div>
     <br></br>
-    <button onClick={googleLogin}>Google Login</button>
+
+    <div id='providers'>
+      <button onClick={googleLogin}>Google Login</button>
+      <button onClick={facebookLogin}>Facebook Login</button>
+    </div>
     </>
 
   )
 }
+
 
 function Register() {
   
