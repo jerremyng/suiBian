@@ -4,6 +4,7 @@ import { fireBaseAuth } from './firebase.js'
 
 //components
 import LoginForm from './components/Login.js';
+import SearchBar from './components/Searchbar.js';
 import './App.css';
 
 export default function App() {
@@ -15,7 +16,9 @@ export default function App() {
       {isLogin ? <br/> : <LoginForm/>}
       
       <section>
+        <h2>let randomness be your gudie</h2>
         <input placeholder='Find a place'></input>
+        {/* <SearchBar/> */}
         <br />
         <div>Or</div>
         <button>Im feeling lucky</button>
