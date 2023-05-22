@@ -19,9 +19,11 @@ return (
 <div>
     <input
     type="search"
-    placeholder="Search here"
+    placeholder="type here..."
     onChange={handleChange}
     value={searchInput} />
+    <div id="list"></div>
+
 
     <div>{searchInput}</div>
 

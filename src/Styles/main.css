@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap"); */
-
+/*navbar css */
 @font-face {
     font-family: 'Migra';
     src: url(fonts/Migra-Extrabold.ttf);
@@ -9,11 +9,16 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Migra", sans-serif;
 }
 
+nav{
+    margin: 0 auto;
+    text-align: center;
+	font-size: x-large;
+} 
+
 :root {
-	--mainColor: #1f2b21;
+	--mainColor: #9db297;
 	--mainColorLight: #bdd3b7;
 	--secondaryColor: #bdd3b7;
 	--textColor: #f8f0de;
@@ -22,6 +27,7 @@
 header {
 	display: flex;
 	align-items: center;
+	font-family: "Migra", sans-serif;
 	justify-content: space-between;
 	height: 80px;
 	padding: 0 2rem;
@@ -34,6 +40,7 @@ nav a {
 	color: var(--textColor);
 	text-decoration: none;
 }
+
 
 nav a:hover {
 	color: var(--secondaryColor);

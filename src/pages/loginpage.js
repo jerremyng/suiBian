@@ -31,28 +31,47 @@ export default function Login() {
   
     //main code
     return (
-      <div className='auth-form-container'>  
-      <h4>Sign Up or Log In`</h4>
+      <div className='auth-form-container'> 
+      <div className='inner-container'>
+        <div className='inner2'>
+          <div className='heading'>
+            <h4 className='header1'>Sign Up or Log In`</h4>
+          </div>
+
       <form onSubmit={handleSubmit}>
+        
         <label for="email">email</label>
+        <br></br>
         <input value={email} type='email' placeholder='youremail@email.com'></input>
         <br></br>
         <br></br>
-        <label for='password'>password</label>
-        <input value={password} type='password' placeholder='password'></input>
+        <label for='password' className='passwordLabel'>password</label>
         <br></br>
-        <button type='submit'>Login</button>
+        <input 
+          value={password} 
+          type='password' 
+          placeholder='password' 
+          className='passwordBox'></input>
+        <br></br>
+        <button type='submit'
+          className='submitButton'>Login</button>
   
       </form>
-      <a src="">Dont have an account?</a>
+      <a src="" className='register'>Dont have an account?</a>
   
       <br></br>
       <div>or</div>
       <br></br>
   
       <div id='providers'>
-        <button onClick={googleLogin}>Continue with Google</button>
-        <button onClick={facebookLogin}>Continue with Facebook</button>
+        <button 
+          onClick={googleLogin}
+          className='googleLogin'>Continue with Google</button>
+        <button 
+          onClick={facebookLogin}
+          className='facebookLogin'>Continue with Facebook</button>
+      </div>
+      </div>
       </div>
       </div>
   

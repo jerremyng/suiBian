@@ -1,6 +1,7 @@
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { fireBaseAuth } from './firebase.js'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import React from 'react';
 
 //pages
 import Home from './pages/home.js';
@@ -8,7 +9,7 @@ import Login from './pages/loginpage.js'
 
 //components
 
-import NavBar from './components/NavBar.js';
+import Navbar from './components/Navbar.js';
 import './App.css';
 
 export default function App() {
@@ -16,11 +17,8 @@ export default function App() {
 
   return (
     <div className="App">
-
-      {/* navbar header stuff */}
+      <Navbar/>
       <Router>
-        <NavBar />
-
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='login' element={<Login/>} />

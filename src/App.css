@@ -1,12 +1,29 @@
+
+/*
 .App {
+  
   background: linear-gradient(to left,#e66465, #9198e5);
   text-align: center;
   display: flex;
   min-height: 100vh;
+  
   align-items: center;
-  justify-content: center;
+  background-image: url("./assets/Home.png");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
   
 }
+*/
+
+
+.App {
+  text-align: center;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -18,6 +35,20 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+body {
+  background-image: url("./assets/Home.png");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f8f0de;
+  font-size: 3.2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -58,13 +89,15 @@ img {
   align-items: center;
   border: white;
   border-style: solid;
-  padding: 2rem;
+  padding: 10rem;
 }
 
 nav {
   position: fixed;
   top: 0;
+  justify-content: center;
   width: 100%;
+  padding-top: 1.3rem;
 }
 
 label {
@@ -76,13 +109,82 @@ input {
   margin: 0.5rem 0;
 }
 
+.locationList {
+  width: 70vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+
+.foodLocation {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.foodLocation:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.foodLocation div {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.foodLocation h1,
+.foodLocation p {
+  margin-left: 20px;
+}
+
 button {
   border: none;
-  background-color: white;
-  padding: 5px;
+  background-color: #f8f0de;
+  padding: 10px;
+  font-size: large;
   border-radius: 10px;
+  color: #282c34;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 input {
   border-radius: 4px;
 }
+
+.SearchBar {
+  width: 100%;
+}
+
+.search{
+  width: 40%;
+  margin: 0 auto;
+  background-color: #f8f0de;
+  color: #f8f0de;
+  border-radius: 5rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 2.7rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--box-shadow);
+}
+
+.SearchBar_box{
+  width: 40%;
+  margin: 0 auto;
+  background-color: aliceblue;
+  color: #f8f0de;
+  border-radius: 5rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 2.7rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--box-shadow);
+}
+ 

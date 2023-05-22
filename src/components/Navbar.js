@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
+import { useNavigate } from "react-router-dom";
 
 
 function Navbar() {
@@ -14,10 +15,11 @@ function Navbar() {
 
 	return (
 		<header>
-            <img src={require("/Users/xintianlim/Desktop/suiBian/src/Styles/suibian_logo.png")} 
-                            style={{width: 55, height: 55}}
-                            />
+			<img src={require("/Users/xintianlim/Desktop/suiBian/src/Styles/suibian_logo.png")}
+				style={{ width: 55, height: 55 }} />
+
 			<nav ref={navRef}>
+				<a href="/login">Sign-In</a>
 				<a href="/#">Account</a>
 				<a href="/#">Saved</a>
 				<a href="/#">Community</a>
@@ -33,6 +35,7 @@ function Navbar() {
 				onClick={showNavbar}>
 				<FaBars />
 			</button>
+
 		</header>
 	);
 }
