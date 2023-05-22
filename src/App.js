@@ -1,41 +1,34 @@
-//import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { fireBaseAuth } from './firebase.js'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+//pages
+import Home from './pages/home.js';
+import Login from './pages/loginpage.js'
 
 //components
-import LoginForm from './components/Login.js';
+
+import NavBar from './components/NavBar.js';
 import './App.css';
 
 export default function App() {
-  const isLogin = !useAuthState(fireBaseAuth);
+  // const isLogin = !useAuthState(fireBaseAuth);
 
   return (
     <div className="App">
-      <NavBar />
-      {isLogin ? <br/> : <LoginForm/>}
-      
-      <section>
-        <input placeholder='Find a place'></input>
-        <br />
-        <div>Or</div>
-        <button>Im feeling lucky</button>
 
-        {/* maybe suggestions here */}
-      </section>
+      {/* navbar header stuff */}
+      <Router>
+        <NavBar />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='login' element={<Login/>} />
+        </Routes>
+      </Router>
 
     </div>
 
   );
 }
 
-function NavBar() {
-  return (
-    <nav>
-      <ul>
-        <img src={require("./assets/logo.png")}/>
-        <li><a href="default.asp">Home</a></li>
-        <button>Click to signin</button>
-      </ul>
-    </nav>
-  )
-  }
