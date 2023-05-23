@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import "../Styles/Searchbar.css";
 
 export default function Searchbar() {
  const [searchInput, setSearchInput] = useState("");
@@ -18,6 +19,7 @@ const handleChange = (e) => {
 return (
 <div>
     <input
+    className='search-box'
     type="search"
     placeholder="type here..."
     onChange={handleChange}

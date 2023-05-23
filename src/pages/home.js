@@ -9,7 +9,7 @@ export default function Home() {
             <div className='tophalf'>
                 <br></br>
                 <br></br>
-                <h2>let randomness be your gudie</h2>
+                <h2>let randomness be your guide</h2>
                 <SearchBar/>
                 <br/>
                 <p>or</p>

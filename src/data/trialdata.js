@@ -1,17 +1,25 @@
-import supermarket from "../assets/supermarket.jpeg";
-import toilet from "../assets/toilet.jpeg";
-
+import ramen from "../assets/ramen.jpeg";
+import mala from "../assets/mala.webp";
+import acai from "../assets/acai.jpeg"
 
 export const trialdata = [
     {
-      name: "NTUC",
-      image: supermarket,
+      name: "Ajisen Ramen",
+      image: ramen,
       location: "Tampines",
     },
 
     {
-      name: "POOPOO",
-      image: toilet,
+      name: "Mala Hotpot",
+      image: mala,
+      location: "Pasir Ris",
+    },
+
+    {
+      name: "Acai Affair",
+      image: acai,
       location: "Pasir Ris",
     }
+
+
 ];
