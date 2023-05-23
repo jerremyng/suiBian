@@ -144,6 +144,7 @@ input {
 .foodLocation h1,
 .foodLocation p {
   margin-left: 20px;
+  font-size: medium;
 }
 
 button {
@@ -158,10 +159,6 @@ button {
 
 input {
   border-radius: 4px;
-}
-
-.SearchBar {
-  width: 100%;
 }
 
 .search{
