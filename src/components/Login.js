@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import { fireBaseAuth } from '../firebase.js';
+import "../Styles/loginpage";
 
 export default function LoginForm() {
 
