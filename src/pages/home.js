@@ -1,5 +1,6 @@
 import FoodLocation from '../components/FoodLocation.js';
 import { trialdata } from '../data/trialdata.js';
+
 import Navbar from '../components/Navbar.js';
 import React from 'react';
 import "../Styles/home.css";
@@ -7,10 +8,14 @@ import { Link } from "react-router-dom";
 
 import "../Styles/Searchbar.css";
 
+
 export default function Home() {
     //const root = ReactDOM..createRoot(document.getElementById('root'));
 
+    var user = fireBaseAuth.currentUser;
+
     return (
+
         <><React.Fragment>
             <Navbar />
         </React.Fragment>
@@ -51,6 +56,7 @@ export default function Home() {
                     </div> 
                     
                 </div>
+
             </div>
             {/* <div>
                 <Footer/>
