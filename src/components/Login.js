@@ -33,7 +33,7 @@ export default function LoginForm() {
     //main code
     return (
       <div className='auth-form-container'>  
-      <h4>Sign Up or Log In`</h4>
+      <h4>Sign Up or Log In</h4>
       <form onSubmit={handleSubmit}>
         <label for="email">email</label>
         <input value={email} type='email' placeholder='youremail@email.com'></input>

@@ -35,7 +35,7 @@ export default function Login() {
       <div className='inner-container'>
         <div className='inner2'>
           <div className='heading'>
-            <h4 className='header1'>Sign Up or Log In`</h4>
+            <h4 className='header1'>Sign Up or Log In</h4>
           </div>
 
       <form onSubmit={handleSubmit}>
