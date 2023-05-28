@@ -1,17 +1,34 @@
 import { useState } from 'react';
-import {createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
-import { fireBaseAuth } from '../firebase.js';
-import "../Styles/loginpage";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+import {createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider} from "firebase/auth";
+import { app, fireBaseAuth } from '../firebase.js';
+import { useNavigate } from 'react-router-dom';
 
-export default function LoginForm() {
+export default function Login() {
 
     //login things
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
   
-    const handleSubmit = (e) => {
+    const handleEmailChange = (e) => {
+      e.preventDefault();
+      setEmail(e.target.value); 
+    };
+
+    const handlePasswordChange = (e) => {
+      e.preventDefault();
+      setPassword(e.target.value);
+    };
+
+    const navigate = useNavigate();
+
+    const checkEmail = (e) => {
       e.preventDefault()
       createUserWithEmailAndPassword(fireBaseAuth, email, password)
+      .then((userCredential) => {
+        var user = userCredential.user;
+        navigate('/home')
+      })
       .catch(error => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -21,41 +38,97 @@ export default function LoginForm() {
   
     const googleLogin = () => {
       const provider = new GoogleAuthProvider();
-      signInWithRedirect(fireBaseAuth,provider);
+      signInWithRedirect(fireBaseAuth,provider)
+      .then((result) => {
+        var user = result.user;
+        navigate('/home')
+      .catch(error => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        document.write(errorCode + errorMessage)
+      })
+    })
+
       //document.write("yes")
-    }
-  
-    const facebookLogin = () => {
-      const provider = new FacebookAuthProvider();
-      signInWithRedirect(fireBaseAuth,provider);
     }
   
     //main code
     return (
-      <div className='auth-form-container'>  
-      <h4>Sign Up or Log In`</h4>
-      <form onSubmit={handleSubmit}>
-        <label for="email">email</label>
-        <input value={email} type='email' placeholder='youremail@email.com'></input>
+      <div className='auth-form-container'> 
+      <div className='inner-container'>
+        <div className='inner2'>
+          <div className='heading'>
+            <h4 className='header1'>Enter your email!</h4>
+          </div>
+
+      <EmailForm />
+
+      {/* <form onSubmit={checkEmail}>
+        <input value={email} onChange={handleEmailChange} type='email' placeholder='Email'></input>
         <br></br>
+        <label for='password' className='passwordLabel'>password</label>
         <br></br>
-        <label for='password'>password</label>
-        <input value={password} type='password' placeholder='password'></input>
+        <input 
+          value={password}
+          onChange={handlePasswordChange} 
+          type='password' 
+          placeholder='password' 
+          className='passwordBox'></input>
         <br></br>
-        <button type='submit'>Login</button>
-  
-      </form>
-      <a src="">Dont have an account?</a>
+        <button type='submit'
+          className='submitButton'>Login</button>
+      </form> */}
   
       <br></br>
       <div>or</div>
       <br></br>
   
       <div id='providers'>
-        <button onClick={googleLogin}>Continue with Google</button>
-        <button onClick={facebookLogin}>Continue with Facebook</button>
+        <button 
+          onClick={googleLogin}
+          className='googleLogin'>Continue with Google</button>
+      </div>
+      </div>
       </div>
       </div>
   
     )
   }
+
+function EmailForm() {
+  const [email, setEmail] = useState('')
+  const handleEmailChange = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+  };
+
+  const checkEmail = (e) => {
+    e.preventDefault()
+    const db = getFirestore(app);
+    const userRef = doc(db, 'users', email);
+    const user = getDoc(userRef)
+
+    if (!user.exists) {
+      console.log('No such user!');
+      return( 
+      <h2>create an account!</h2>
+      )
+    } else {
+      console.log(user.data())
+      // return <Password />
+    }
+
+
+  }
+
+  return (
+    <form onSubmit={checkEmail}>
+      <input
+        value={email} 
+        onChange={handleEmailChange} 
+        type='email' 
+        placeholder='Email'></input>
+    <button type='submit'className='submitButton'>Continue</button>
+  </form>
+  )
+}

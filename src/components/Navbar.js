@@ -15,7 +15,7 @@ function Navbar() {
 
 	return (
 		<header>
-			<img src={require("/Users/xintianlim/Desktop/suiBian/src/Styles/suibian_logo.png")}
+			<img src={require("../Styles/suibian_logo.png")}
 				style={{ width: 55, height: 55 }} />
 
 			<nav ref={navRef}>

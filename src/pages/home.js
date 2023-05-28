@@ -1,14 +1,17 @@
 import FoodLocation from '../components/FoodLocation.js';
 import SearchBar from '../components/Searchbar.js';
 import { trialdata } from '../data/trialdata.js';
+import { fireBaseAuth } from '../firebase.js';
 
 export default function Home() {
+
+    var user = fireBaseAuth.currentUser;
 
     return (
         <div className='homepage'>
             <div className='tophalf'>
                 <br></br>
-                <br></br>
+                { user == null ? <br></br>: <h3>Welcome back {user.name}</h3>}
                 <h2>let randomness be your gudie</h2>
                 <SearchBar/>
                 <br/>

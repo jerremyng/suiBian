@@ -1,11 +1,10 @@
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { fireBaseAuth } from './firebase.js'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+//packages
+import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import React from 'react';
 
 //pages
 import Home from './pages/home.js';
-import Login from './pages/loginpage.js'
+import Loginpage from './pages/loginpage.js'
 
 //components
 
@@ -18,10 +17,11 @@ export default function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Router>
+      <Router basename=''>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='login' element={<Login/>} />
+          <Route path='/' element={<Navigate to='/home' />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='login' element={<Loginpage/>} />
         </Routes>
       </Router>
 
