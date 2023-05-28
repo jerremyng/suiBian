@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
+@font-face {
+    font-family: 'Calistoga';
+    src: url(fonts/Calistoga-Regular.ttf);
+}
+
+body {
+    background-color: #FDF5DC;
+} 
+
+.about {
+    padding-top: 100px;
+}
+
+h1 {
+    font-family: Calistoga;
+    letter-spacing: 1.5px;
+    color: #a72608;
+    font-size: xxx-large;
+    text-transform: uppercase;
+}
+
+.save {
+    background-color: transparent;
+    color: #A8763e;
+    border-color: transparent;
+    font-size: larger;
+    font-family: Calistoga;
+    text-transform: uppercase;
+    border-radius: 12rem;
+    margin-top: 5px;
+    padding: 10px;
+    
+}
+
+p {
+    font-family: 'Source Sans Pro';
+    font-weight: 300px;
+    font-size: large;
+}
+
+h4 {
+    font-size: x-large;
+    font-family: Calistoga;
+    text-align: left;
+    padding-left: 50px;
+    letter-spacing: 1.5px;
+    color: #2f9462;
+}
+
+.slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.slides .cards {
+    font-size: large;
+}

@@ -1,38 +1,53 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap"); */
-/*navbar css */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
 @font-face {
-    font-family: 'Migra';
-    src: url(fonts/Migra-Extrabold.ttf);
+    font-family: 'Calistoga';
+    src: url(fonts/Calistoga-Regular.ttf);
 }
+
+
+
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+
 }
 
 nav{
     margin: 0 auto;
     text-align: center;
 	font-size: x-large;
+	width: 100%;
 } 
 
+.logo {
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+
 :root {
-	--mainColor: #9db297;
-	--mainColorLight: #bdd3b7;
-	--secondaryColor: #bdd3b7;
-	--textColor: #f8f0de;
+	--mainColor: #2f9462;
+	--mainColorLight: #e82c2c;
+	--secondaryColor: #ed5600;
+	--textColor: #a72608;
 }
 
 header {
 	display: flex;
 	align-items: center;
-	font-family: "Migra", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: medium;
 	justify-content: space-between;
 	height: 80px;
 	padding: 0 2rem;
-	background-color: var(--mainColor);
 	color: var(--textColor);
+	background-color: #FDF5DC;
+	border-bottom: 3px double #28282b;
+	position: fixed;
+	width: 100%;
 }
 
 
@@ -40,6 +55,7 @@ nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
+	font-size: x-large;
 }
 
 

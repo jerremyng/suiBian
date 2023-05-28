@@ -1,4 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import "../Styles/Searchbar.css";
+import { FaGenderless } from "react-icons/fa";
 
 export default function Searchbar() {
  const [searchInput, setSearchInput] = useState("");
@@ -16,17 +18,20 @@ const handleChange = (e) => {
 // }
 
 return (
-<div>
-    <input
-    type="search"
-    placeholder="type here..."
-    onChange={handleChange}
-    value={searchInput} />
-    <div id="list"></div>
-
-
+    <div className="search-container">
+      <input
+      className='search-input'
+      type="search"
+      placeholder="search here..."
+      onChange={handleChange}
+      value={searchInput} />
+      <a href="/" className="search-btn">
+   
+      </a>
+      <div id="list"></div>
     <div>{searchInput}</div>
-
-</div>)
+    </div>
+  
+)
 
 }

@@ -2,9 +2,10 @@ import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
 import { useNavigate } from "react-router-dom";
+import Searchbar from "./Searchbar";
 
 
-function Navbar() {
+function Navbar() { 
 	const navRef = useRef();
 
 	const showNavbar = () => {
@@ -12,18 +13,17 @@ function Navbar() {
 			"responsive_nav"
 		);
 	};
+	/**/
 
 	return (
 		<header>
-			<img src={require("../Styles/suibian_logo.png")}
-				style={{ width: 55, height: 55 }} />
-
 			<nav ref={navRef}>
 				<a href="/login">Sign-In</a>
 				<a href="/#">Account</a>
 				<a href="/#">Saved</a>
 				<a href="/#">Community</a>
 				<a href="/#">SG-lossary</a>
+				<Searchbar/>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

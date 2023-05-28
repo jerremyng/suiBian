@@ -54,13 +54,8 @@ export default function Login() {
   
     //main code
     return (
-      <div className='auth-form-container'> 
-      <div className='inner-container'>
-        <div className='inner2'>
-          <div className='heading'>
-            <h4 className='header1'>Enter your email!</h4>
-          </div>
-
+      <div className='auth-form-container'>  
+      <h4>Enter you email!</h4>
       <EmailForm />
 
       {/* <form onSubmit={checkEmail}>
