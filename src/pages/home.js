@@ -1,11 +1,10 @@
 import FoodLocation from '../components/FoodLocation.js';
 import { trialdata } from '../data/trialdata.js';
 
+import {fireBaseAuth} from '../firebase.js'
 import Navbar from '../components/Navbar.js';
 import React from 'react';
 import "../Styles/home.css";
-import { Link } from "react-router-dom";
-
 import "../Styles/Searchbar.css";
 
 
@@ -19,7 +18,7 @@ export default function Home() {
         <><React.Fragment>
             <Navbar />
         </React.Fragment>
-            <div>
+            <section>
                 <div className='tophalf'>
                     {/* <h2><span> Let  randomness  be  your  guide </span></h2> 
                     <Link to="/about">
@@ -28,7 +27,10 @@ export default function Home() {
                     <h2 className='or'>or, be your own</h2>
                     <SearchBar/> */}
                     <div class="div1">
-                        <h2>Let SuiBian be your guide</h2>
+                        {user == null 
+                        ? <h2>Let Suibian be your guide</h2> 
+                        : <h2>Welcome Back {user.email}</h2>}
+                        {/* <h2>Let SuiBian be your guide</h2> */}
                         <button className='lucky'>Generate</button>
                     </div>
                     <div class="div3">
@@ -57,10 +59,7 @@ export default function Home() {
                     
                 </div>
 
-            </div>
-            {/* <div>
-                <Footer/>
-            </div> */}
+            </section>
             
             </>
     );

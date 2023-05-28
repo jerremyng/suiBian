@@ -18,12 +18,6 @@ export default function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='login' element={<Login />} />
-          <Route path="about" element={<About />} />
-      <Navbar/>
-      <Router basename=''>
-        <Routes>
           <Route path='/' element={<Navigate to='/home' />} />
           <Route path='/home' element={<Home />} />
           <Route path='login' element={<Loginpage/>} />

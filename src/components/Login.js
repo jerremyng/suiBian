@@ -1,26 +1,25 @@
 import { useState } from 'react';
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { collection , doc, getDoc, setDoc } from "firebase/firestore";
 import {createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider} from "firebase/auth";
-import { app, fireBaseAuth } from '../firebase.js';
+import { fireBaseAuth, fireBaseStore } from '../firebase.js';
 import { useNavigate } from 'react-router-dom';
+
 
 export default function Login() {
 
-    //login things
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-  
     const handleEmailChange = (e) => {
       e.preventDefault();
-      setEmail(e.target.value); 
-    };
+     setEmail(e.target.value);
+     };
 
+    const [password, setPassword] = useState('')
     const handlePasswordChange = (e) => {
-      e.preventDefault();
-      setPassword(e.target.value);
-    };
-
-    const navigate = useNavigate();
+    e.preventDefault();
+    setPassword(e.target.value);
+  };
 
     const checkEmail = (e) => {
       e.preventDefault()
@@ -48,17 +47,17 @@ export default function Login() {
         document.write(errorCode + errorMessage)
       })
     })
-
-      //document.write("yes")
     }
   
     //main code
     return (
       <div className='auth-form-container'>  
-      <h4>Enter you email!</h4>
-      <EmailForm />
+      <h4>Enter your email!</h4>
+      {/* <EmailForm /> */}
 
-      {/* <form onSubmit={checkEmail}>
+      <form onSubmit={checkEmail}>
+      <label for='email' className='emailLabel'>Email</label>
+      <br></br>
         <input value={email} onChange={handleEmailChange} type='email' placeholder='Email'></input>
         <br></br>
         <label for='password' className='passwordLabel'>password</label>
@@ -72,7 +71,7 @@ export default function Login() {
         <br></br>
         <button type='submit'
           className='submitButton'>Login</button>
-      </form> */}
+      </form>
   
       <br></br>
       <div>or</div>
@@ -84,9 +83,6 @@ export default function Login() {
           className='googleLogin'>Continue with Google</button>
       </div>
       </div>
-      </div>
-      </div>
-  
     )
   }
 
@@ -99,7 +95,13 @@ function EmailForm() {
 
   const checkEmail = (e) => {
     e.preventDefault()
-    const db = getFirestore(app);
+
+    const db = fireBaseStore
+    const userRef1 = collection(db, "users");
+    
+    setDoc(doc(userRef1, email), {name: "bob"});
+
+    
     const userRef = doc(db, 'users', email);
     const user = getDoc(userRef)
 

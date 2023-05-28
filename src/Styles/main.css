@@ -115,4 +115,9 @@ nav {
 	nav a {
 		font-size: 1.5rem;
 	}
+
+	section {
+		margin-top: 100px
+	}
+
 }
