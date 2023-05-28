@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import "../Styles/Searchbar.css";
 
 export default function Home() {
-    //const root = ReactDOM.createRoot(document.getElementById('root'));
+    //const root = ReactDOM..createRoot(document.getElementById('root'));
 
     return (
         <><React.Fragment>

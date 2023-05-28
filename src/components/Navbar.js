@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Searchbar from "./Searchbar";
 
 
-function Navbar() {
+function Navbar() { 
 	const navRef = useRef();
 
 	const showNavbar = () => {
@@ -13,6 +13,7 @@ function Navbar() {
 			"responsive_nav"
 		);
 	};
+	/**/
 
 	return (
 		<header>
