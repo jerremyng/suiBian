@@ -3,6 +3,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import { useAuthState } from 'react-firebase-hooks/auth'
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBtCKR5oHaQcmb4ff8LVXZDt8XP2vl6RLc",
@@ -17,3 +18,4 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const fireBaseAuth = getAuth();
+export const fireBaseStore = getFirestore()

@@ -1,0 +1,25 @@
+.auth-form-container {
+    padding-top: 100px;
+    justify-content: center;
+}
+
+h4 {
+    text-align: center;
+
+}
+
+label {
+    font-weight: 700;
+    font-size: larger;
+}
+
+input {
+    width: 250px;
+    border-color: transparent;
+    height: 30px;
+}
+
+::placeholder {
+    color:black;
+    font-size: medium;
+}
