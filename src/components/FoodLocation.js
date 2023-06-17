@@ -16,3 +16,12 @@ function FoodLocation({ image, name, location }) {
   }
   
   export default FoodLocation;
+
+
+  // {trialdata.map((foodLocation, key) => {
+  //   return (
+  //       <FoodLocation
+  //           key={key}
+  //           image={foodLocation.image}
+  //           name={foodLocation.name}
+  //           location={foodLocation.location}
