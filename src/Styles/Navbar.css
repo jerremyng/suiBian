@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    padding: 5px;
+    /* justify-content: center; */
+    width: 100%;
+}
+
+a img {
+    width: 90px;
+    height: 90px;
+}
+
+
+/* interactivity */
+nav a:hover {
+	color: var(--secondaryColor);
+}

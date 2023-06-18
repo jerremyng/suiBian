@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
-  
+
     const [email, setEmail] = useState('')
 
     //main code
     return (
       <div className='auth-form-container'>  
       <h4>Enter your email!</h4>
-      {exist ? <PasswordForm/> :<EmailForm/>}
+      {true ? <PasswordForm/> :<EmailForm/>}
   
       <br></br>
       <div>or</div>
