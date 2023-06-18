@@ -22,9 +22,8 @@ function Navbar() {
 					<img src={require("../assets/logo2.png")} alt="Coding Beauty logo"></img>
 				</a>
 				<a href="/login">Sign-In</a>
-				<a href="/#">Account</a>
+				<a href="/">Home</a>
 				<a href="/#">Saved</a>
-				<a href="/#">Community</a>
 				<a href="/#">SG-lossary</a>
 				<button
 					className="nav-btn nav-close-btn"

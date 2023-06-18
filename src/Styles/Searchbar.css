@@ -3,6 +3,27 @@
     src: url(fonts/Calistoga-Regular.ttf);
 }
 
+.search-button {
+  border-color: transparent;
+  background-color: #2f9462;
+  border-radius: 15px;
+  font-size: medium;
+  color: aliceblue;
+  padding: 7px;
+  font-family: 'Calistoga';
+  margin-left: 10px;
+}
+
+.locationList {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  background-color: #FDF5DC
+  ;
+}
+
 .search-container{
     background: #2f9462;
     height: 30px;
@@ -35,9 +56,14 @@
 }
 
 ::placeholder{
-    color:aliceblue;
+    color:#2f9462;
     font-family: Calistoga;
     font-size: large;
+    background-color: #fff;
+    padding: 10px;
+    font-size: medium;
+    margin-right: 10px;
+    box-shadow: #000;
 }
 
 /* .search-container .search-btn .fas{
