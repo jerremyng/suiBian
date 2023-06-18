@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/about.css";
 import Navbar from "../components/Navbar";
 import { FaBookmark } from "react-icons/fa";
-import ReactCardSlider from 'react-card-slider-component';
+// import ReactCardSlider from 'react-card-slider-component';
 
 //images
 import mala1 from '../assets/mala.jpeg';
@@ -43,7 +43,7 @@ function About() {
         
         <h4> Locations to explore</h4>
           <div className="slides">
-            <ReactCardSlider slides={slides}/>
+            {/* <ReactCardSlider slides={slides}/> */}
           </div>
       </div>
     </div></>

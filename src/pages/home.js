@@ -1,14 +1,17 @@
 import FoodLocation from '../components/FoodLocation.js';
 import { trialdata } from '../data/trialdata.js';
-
 import { fireBaseAuth } from '../firebase.js'
+
 import Navbar from '../components/Navbar.js';
 import { FaBars, FaTimes } from "react-icons/fa";
+import Searchbar from '../components/Searchbar.js';
 import React, { useState } from 'react';
 import "../Styles/home.css";
 import "../Styles/Searchbar.css";
 import { Searchbar } from "../components/Searchbar";
 import { SearchResultsList } from "../components/SearchResultsList";
+
+
 
 export default function Home() {
 
@@ -60,6 +63,7 @@ export default function Home() {
                         })}
                         <br></br>
                     </div> 
+                {/* <Search></Search> */}
                     
                 </div>
 
