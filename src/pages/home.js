@@ -3,8 +3,6 @@ import { trialdata } from '../data/trialdata.js';
 import { fireBaseAuth } from '../firebase.js'
 
 import Navbar from '../components/Navbar.js';
-import { FaBars, FaTimes } from "react-icons/fa";
-import Searchbar from '../components/Searchbar.js';
 import React, { useState } from 'react';
 import "../Styles/home.css";
 import "../Styles/Searchbar.css";
@@ -28,20 +26,15 @@ export default function Home() {
                         {user == null 
                         ? <h2>Let Suibian be your guide</h2> 
                         : <h2>Welcome Back {user.email}</h2>}
-                        {/* <h2>Let SuiBian be your guide</h2> */}
                         <button className='lucky'>Generate</button>
                         <Searchbar setResults={setResults}/>
                         {results && results.length > 0
                         && <SearchResultsList results = {results} />}
                     </div>
-                    {/* <div class="div3">
+                    <div class="div3">
                         <img src={require("../assets/smol.png")}/>
-                    </div> */}
-                    <div className='div4'>
-                        <img src={require("../assets/logo2.png")}
-                    style={{ width: 140, height: 140 }}
-                    className="logo" />
                     </div>
+
                     {/* <div className='div2'>
                         <Searchbar setResults={setResults}/>
                     {results && results.length > 0
