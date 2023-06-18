@@ -1,3 +1,84 @@
+.foodLocation {
+  border-radius: 20px;
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: #A72608;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodLocation:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.foodLocation div {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.foodLocation h3 {
+  margin-top: 8px;
+  font-family: Calistoga, sans-serif;
+  letter-spacing: 1px;
+  font-size: large;
+  color: #FDF5DC;
+}
+
+.foodLocation .med {
+  font-size: medium;
+  color:#fff;
+  margin-top: -3px;
+  font-family: 'Source Sans Pro', Times, serif;
+}
+
+.foodLocation button {
+  color: #fff;
+  font-family: 'Calistoga';
+  background-color: #a8763e;
+  border-radius: 3rem;
+  margin-top: 2px;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-color: transparent;
+  font-size: small;
+  font-weight: 300;
+}
+
+/* .search-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-image {
+  height: 100px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card__title {
+  max-width: 200px;
+  text-align: center;
+  margin: 12px 0px;
+} */
+/* 
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
   /* color variables
@@ -15,7 +96,7 @@ $clr-gray700: #161d34;
 
 /*   border radius */
 
-
+/*
 *,
 *::before,
 *::after {
@@ -88,4 +169,8 @@ $clr-gray700: #161d34;
     background: #d50000;
     color: white;
   }
-}
+} */
+
+
+
+
