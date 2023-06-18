@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
 import { useNavigate } from "react-router-dom";
@@ -9,13 +9,11 @@ import "../Styles/Navbar.css";
 
 function Navbar() { 
 	const navRef = useRef();
-
 	const showNavbar = () => {
 		navRef.current.classList.toggle(
 			"responsive_nav"
 		);
 	};
-	/**/
 
 	return (
 		<header>
@@ -28,7 +26,6 @@ function Navbar() {
 				<a href="/#">Saved</a>
 				<a href="/#">Community</a>
 				<a href="/#">SG-lossary</a>
-				<Searchbar/>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

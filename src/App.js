@@ -2,7 +2,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import React from 'react';
 
-
 //pages
 import Home from './pages/home.js';
 import Loginpage from './pages/loginpage.js';
@@ -29,4 +28,3 @@ export default function App() {
 
   );
 }
-
