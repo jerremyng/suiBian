@@ -5,8 +5,19 @@
     src: url(fonts/Calistoga-Regular.ttf);
 }
 
+/* main {
+    margin-top: 100px;
+} */
+
 .tophalf {
-    background-color: #FDF5DC;
+    display: block;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1px;
+/*     background-color: #FDF5DC;
+    margin-bottom: 2rem;
+    padding-top: 100px; */
 }
 
 .fake-header {
@@ -29,6 +40,22 @@
     text-align: left;
     vertical-align: middle;
     padding-top: 30px;
+    
+/* .div3 { 
+    grid-area: 1 / 4 / 3 / 7;; 
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+/* .div2 { 
+    grid-area: 2 / 4 / 3 / 7; } */
+    
+/* .div1 { 
+    /* padding: 20px; */
+/*     justify-content: center;
+    font-family: 'Calistoga', Times, serif;
+    align-items: center;
+    display: flex; */
 }
 
 h2 {
@@ -59,6 +86,15 @@ h2 {
 .dont {
     font-family: 'Calistoga';
     font-size: xx-large;
+    margin-top: 100px;
+    margin-left: 210px;
+    letter-spacing: 3px;
+    font-size: 55px;
+    /* text-align: center; */
+    /* position: relative;  
+    top: 50%;  
+    left: 50%; */
+    display: inline;
 }
 
 .lucky {
@@ -79,15 +115,14 @@ h2 {
 
 
 img {
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 150px;
     object-fit: contain;
+    display: inline;
 }
 
 
 /* middle */
-
-
 
 .what {
     background-color: #2f9462;
@@ -100,7 +135,7 @@ img {
     
 }
 
-.div2 button {
+.lucky {
     border: none;
     background-color: #2f9462;
     padding: 10px;
@@ -112,14 +147,7 @@ img {
     justify-content: center;
     font-family: 'Source Sans Pro', Times, serif;
     margin-top: 20px;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    justify-content: center;
-    width: 100%;
-    padding-top: 1.3rem;
+    /* display: block; */
 }
 
 .bottomhalf {

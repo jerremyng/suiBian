@@ -5,22 +5,12 @@
     src: url(fonts/Calistoga-Regular.ttf);
 }
 
-
-
-
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 
 }
-
-nav{
-    margin: 0 auto;
-    text-align: center;
-	font-size: x-large;
-	width: 100%;
-} 
 
 .logo {
 	margin-top: 100px;
@@ -36,30 +26,27 @@ nav{
 }
 
 header {
-	display: flex;
+	display: block;
 	align-items: center;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: medium;
 	justify-content: space-between;
-	height: 80px;
-	padding: 0 2rem;
+	height: 100px;
+	/* padding: 0 2rem; */
 	color: var(--textColor);
 	background-color: #FDF5DC;
 	border-bottom: 3px double #28282b;
 	position: fixed;
 	width: 100%;
+	/* border: none; */
 }
+
 
 nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
 	font-size: x-large;
-}
-
-
-nav a:hover {
-	color: var(--secondaryColor);
 }
 
 header .nav-btn {
@@ -114,4 +101,9 @@ nav {
 	nav a {
 		font-size: 1.5rem;
 	}
+
+	section {
+		margin-top: 100px
+	}
+
 }
