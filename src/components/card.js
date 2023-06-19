@@ -10,7 +10,7 @@ export default function Card({foo}) {
         <h3> {foo["name"]} </h3>
         <h3 className="med"> {foo["address"]["buildingName"]} </h3>
         <Link to="/about">
-          <button>Find out more</button>
+          <button>View Place</button>
         </Link>
       </div>
   );

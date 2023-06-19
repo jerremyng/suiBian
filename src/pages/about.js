@@ -26,9 +26,8 @@ const slides = [
 
 function About() {
   return (
-  <><React.Fragment>
-      <Navbar/>
-    </React.Fragment>
+  <>
+    <Navbar/>
 
     <div className="about">
       <div className="aboutBottom">

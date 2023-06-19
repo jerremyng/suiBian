@@ -25,21 +25,20 @@ export const Searchbar = () => {
   //     setFood(data);
   //   })}, [])
 
-
-const search = async(e)=> {
+const search = async(e) => {
   e.preventDefault();
     console.log("Searching");
     try{
-      const res= await fetch(`https://api.stb.gov.sg/content/food-beverages/v2/search?searchType=keyword&searchValues=${query}`,{
+      const res = await fetch(`https://api.stb.gov.sg/content/food-beverages/v2/search?searchType=keyword&searchValues=${query}`,
+      {
         method: "GET",
         headers : {
-          'ApiEndPointTitle':
-                          'Search Food and Beverages By Keyword or UUIDs',
+          'ApiEndPointTitle':'Search Food and Beverages By Keyword or UUIDs',
           'X-API-Key': 'waMGfQ1HV5gAA7emOObvMXDOHQXnpeQE',
           'Content-Type': 'application/json'
         }
       });
-      const data= await res.json();
+      const data = await res.json();
       console.log(data);
       console.log(data.data);
       setFood(data.data);
@@ -50,7 +49,7 @@ const search = async(e)=> {
     }
   }
   
-  const changeHandler=(e)=>{
+  const changeHandler = e => {
     setQuery(e.target.value);
   }
 
@@ -59,7 +58,7 @@ const search = async(e)=> {
       <form className="d-flex" onSubmit={search} autoComplete="off">
         <input
           type="search"
-          placeholder="kinda know what you want?"
+          placeholder = "Find a place"
           className="me-2"
           aria-label="search"
           name="query"
