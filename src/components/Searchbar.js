@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaSearch } from "react-icons/fa";
 import "../Styles/Searchbar.css";
-import FoodLocation from '../components/FoodLocation.js';
 import Card from "../components/card";
 
 export const Searchbar = () => {
@@ -76,23 +74,6 @@ const search = async(e) => {
       {food.map(foo => {
         return <Card foo = {foo}/>;
       })}
-      {/* {food > 0 ?(
-        <div className="container">
-          <div className="grid">
-            {food.map((foodLocation, key) => {
-              return (
-                  <FoodLocation
-                      key={key}
-                      image={foodLocation.thumbnails}
-                      name={foodLocation.name}
-                      location={foodLocation.address}/>
-                    )
-              })}
-          </div>
-        </div>
-      ):(
-        <h2>Sorry !! No Movies Found</h2>
-      )} */}
     </div> 
     </>
   );
