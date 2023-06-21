@@ -13,13 +13,12 @@ import { Searchbar } from "../components/Searchbar";
 export default function Home() {
 
     var user = fireBaseAuth.currentUser;
-    const [results, setResults] = useState([]);
     return (
 
         <><React.Fragment>
             <Navbar />
         </React.Fragment>
-            <section>
+            <main>
                 <div className='tophalf'>
                     <div className='fake-header'>
                         <div className='div1'>
@@ -49,36 +48,10 @@ export default function Home() {
                     <div className='div5'>
                         <Searchbar/>
                     </div>
-                    <div class="div3">
-                        <img src={require("../assets/smol.png")}/>
-                    </div> */}
                     
-                    {/* <div className='div2'>
-                        <Searchbar setResults={setResults}/>
-                    {results && results.length > 0
-                    && <SearchResultsList results = {results} />}
-                        
-                    </div> */}
                 </div>
-                {/* <div className='bottomhalf'>
-                    <h1 className='what'>what's new</h1>
-                    <div className='locationList'>
-                        {trialdata.map((foodLocation, key) => {
-                            return (
-                                <FoodLocation
-                                    key={key}
-                                    image={foodLocation.image}
-                                    name={foodLocation.name}
-                                    location={foodLocation.location} />
-                            );
-                        })}
-                        <br></br>
-                    </div> 
-                {/* <Search></Search> */}
-                    
-                </div> */}
 
-            </section>
+            </main>
             
             </>
     );
