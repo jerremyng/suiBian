@@ -81,6 +81,23 @@
   animation: hoverShake 0.15s linear 3;
 }
 
+#search {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+#tags-box {
+  /* border:#2f9462; */
+  border: 10px, #2f9462;
+  border-style: solid;
+  width: 327.8px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: center;
+}
+
 /*
 * {
     margin: 0;
