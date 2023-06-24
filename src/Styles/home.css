@@ -5,57 +5,8 @@
     src: url(fonts/Calistoga-Regular.ttf);
 }
 
-/* main {
-    margin-top: 100px;
-} */
-
-.tophalf {
+section {
     display: block;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 1px;
-/*     background-color: #FDF5DC;
-    margin-bottom: 2rem;
-    padding-top: 100px; */
-}
-
-.fake-header {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    padding-top: 80px;
-}
-
-.div1 {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.div2 {
-    grid-area: 1 / 2 / 2 / 6;
-    font-family: 'Calistoga', Times, serif;
-    align-items: center;
-    text-align: left;
-    vertical-align: middle;
-    padding-top: 30px;
-    
-/* .div3 { 
-    grid-area: 1 / 4 / 3 / 7;; 
-    margin-right: 20px;
-    margin-top: 40px;
-}
-
-/* .div2 { 
-    grid-area: 2 / 4 / 3 / 7; } */
-    
-/* .div1 { 
-    /* padding: 20px; */
-/*     justify-content: center;
-    font-family: 'Calistoga', Times, serif;
-    align-items: center;
-    display: flex; */
 }
 
 h2 {
@@ -67,11 +18,8 @@ h2 {
 }
 
 .mid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .div3 { 
@@ -83,26 +31,27 @@ h2 {
     vertical-align: middle;
 }
 
+.welcome {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
 .dont {
     font-family: 'Calistoga';
     font-size: xx-large;
     margin-top: 100px;
-    margin-left: 210px;
+    /* margin-left: 210px; */
     letter-spacing: 3px;
     font-size: 55px;
+    /* justify-content: center; */
     /* text-align: center; */
+    /* vertical-align: middle; */
     /* position: relative;  
     top: 50%;  
     left: 50%; */
-    display: inline;
+    /* display: inline; */
 }
-
-
-.div4 { 
-    grid-area: 1 / 2 / 2 / 3; 
-}
-
-
 
 img {
     width: 350px;
@@ -113,17 +62,6 @@ img {
 
 
 /* middle */
-
-.what {
-    background-color: #2f9462;
-    font-family: Calistoga;
-    font-size: x-large;
-    color: #FDF5DC;
-    letter-spacing: 4px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    
-}
 
 .lucky {
     border: none;
@@ -137,7 +75,3 @@ img {
     font-family: 'Source Sans Pro', Times, serif;
     margin-top: 20px;
   }
-
-.bottomhalf {
-    background-color: #2f9462;
-}

@@ -12,12 +12,6 @@
 
 }
 
-.logo {
-	margin-top: 100px;
-	margin-left: 20px;
-}
-
-
 :root {
 	--mainColor: #2f9462;
 	--mainColorLight: #e82c2c;
@@ -36,18 +30,18 @@ header {
 	color: var(--textColor);
 	background-color: #FDF5DC;
 	border-bottom: 3px double #28282b;
-	position: fixed;
+	position: fixed, 0;
 	width: 100%;
 	/* border: none; */
 }
 
 
-nav a {
+/* nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
 	font-size: x-large;
-}
+} */
 
 header .nav-btn {
 	padding: 5px;

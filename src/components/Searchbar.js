@@ -88,32 +88,31 @@ export const Searchbar = () => {
       <button className='lucky' onClick={randomPlace}>Feeling lucky?</button>
       </div>
       <div id="tags-box">
-        <h3>Filters</h3>
-
-        <label>Two
+        <label>Family
             <input type="checkbox" />
         </label>
 
-        <label>Three
+        <label>Couple
             <input type="checkbox" />
         </label>
-        <label>Three
+        <label>Japanese
             <input type="checkbox" />
         </label>
-        <label>Three
+        <label>Brunch
             <input type="checkbox" />
         </label>
-        <label>Three
+        <label>Mexican
             <input type="checkbox" />
         </label>
       </div>
     </div>
 
     <div className='locationList'>
-      {food.map(foo => {
-        return <Card foo = {foo}/>;
+      {food.map(locationData => {
+        return <Card foo = {locationData}/>;
       })}
     </div> 
+
     </>
   );
 }

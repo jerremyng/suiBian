@@ -1,9 +1,6 @@
 import { useRef, useState} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
-import { useNavigate } from "react-router-dom";
-import Searchbar from "./Searchbar";
-
 import "../Styles/Navbar.css";
 
 
