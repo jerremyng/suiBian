@@ -28,22 +28,13 @@ export default function Home() {
                     </div>
 
                     <div className='mid'> 
-                        <div className='div3'>
-                            <h2 className='dont'>
-                                Whats for Lunch?
-                            </h2>
-                            <button className='lucky'>Feeling lucky?</button>
-                        </div>
-                        <div className='div4'>
-                            <img src={require("../assets/smol.png")}
-                                style={{ height: 300 }}/>
-                        </div>
+                        <h2 className='dont'>Whats for Lunch?</h2>
+                        <img src={require("../assets/smol.png")}
+                            style={{ height: 300 }}/>
                     </div>
-                    <div className='div5'>
-                        <Searchbar/>
-                    </div>
-                    
+                    <Searchbar/>             
                 </div>
+                
                 {/* <div className='bottomhalf'>
                     <h1 className='what'>what's new</h1>
                     <div className='locationList'>

@@ -97,16 +97,6 @@ h2 {
     display: inline;
 }
 
-.lucky {
-    margin-top: 20px;
-    border-radius: 15px;
-    border-color: transparent;
-    background-color: #a72608;
-    padding: 15px;
-    color: #fff;
-    font-size: x-large;
-    font-family: 'Source Sans Pro';
-}
 
 .div4 { 
     grid-area: 1 / 2 / 2 / 3; 
@@ -138,17 +128,15 @@ img {
 .lucky {
     border: none;
     background-color: #2f9462;
-    padding: 10px;
+    padding: 15px;
     font-size: x-large;
-    border-radius: 10px;
+    border-radius: 15px;
     color: #FDF5DC;
-    width: 20%;
     align-items: center;
     justify-content: center;
     font-family: 'Source Sans Pro', Times, serif;
     margin-top: 20px;
-    /* display: block; */
-}
+  }
 
 .bottomhalf {
     background-color: #2f9462;
