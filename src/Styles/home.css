@@ -75,3 +75,7 @@ img {
     font-family: 'Source Sans Pro', Times, serif;
     margin-top: 20px;
   }
+
+  button:hover {
+    cursor: pointer;
+  }
