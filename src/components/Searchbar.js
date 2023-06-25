@@ -15,7 +15,7 @@ export const Searchbar = () => {
     e.preventDefault();
       console.log("Searching");
       try{
-        const res = await fetch(`https://api.stb.gov.sg/content/food-beverages/v2/search?searchType=keyword&searchValues=${query}`,
+        const res = await fetch(`https://api.stb.gov.sg/content/food-beverages/v2/search?searchType=keyword&searchValues=${query}&limit=50`,
         {
           method: "GET",
           headers : {
@@ -43,7 +43,7 @@ export const Searchbar = () => {
     const offset = Math.floor(Math.random()) * 100
 
     try{
-      const res = await fetch(`https://api.stb.gov.sg/content/food-beverages/v2/search?searchType=keyword&searchValues=${randomCharacter}&offset=${offset}&limit=50`,
+      const res = await fetch(`https://api.stb.gov.sg/content/food-beverages/v2/search?searchType=keyword&searchValues=${randomCharacter}&offset=${offset}&limit=6`,
       {
         method: "GET",
         headers : {
