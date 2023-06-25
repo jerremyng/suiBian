@@ -1,15 +1,20 @@
 .slider {
   /* position: block; */
   margin: 0 auto;
-  height: 150px;
+  height: 200px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+  display: block;
 }
 
 .slide-container {
     display: flex;
     overflow: hidden;
     overflow-x: scroll;
+    height: inherit;
+    width: 250px;
+    /* height: 200px;
+    width: 300px; */
 }
 
 img {
