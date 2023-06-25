@@ -24,10 +24,8 @@ export default function Slider({slides}) {
   //   }
   // }
 
-  const [state, setState] = useState({
-    position: 0,
-    transition: 0.45
-  })
+
+//   })
 
   const { position, transition } = state
 
@@ -39,6 +37,7 @@ export default function Slider({slides}) {
             {/* {slides = undefined
             ? <div/>
             : slides.map(slide => <img src={slide['url']}/>)}  */}
+
         </div>
   </div>
   )

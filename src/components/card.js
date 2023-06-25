@@ -5,7 +5,7 @@ import Slider from './Slider';
 
 export default function Card({foo}) {
   const [modalOpen, setModalOpen] = useState(false);
-  
+
   return (
       <div className="foodLocation">
         <div className='title'>
@@ -22,6 +22,7 @@ export default function Card({foo}) {
         </ul>
 
         <p>Rating: {foo["rating"]} ({Object.keys(foo['reviews']).length == 0 ? "No" : Object.keys(foo['reviews']).length} reviews)</p>
+
           <button
             className="openModalBtn"
             onClick={() => {

@@ -13,6 +13,7 @@ export default function Home() {
         <>
             <Navbar />
             <section id='find'>
+
                 {/* {user == null 
                     ? <h2>Let Suibian be your guide</h2> 
                     : <h2>Welcome Back {user.email}</h2>} */}
@@ -29,6 +30,7 @@ export default function Home() {
                         <h2>Discover</h2>
                         <p>Your new favourite hangouts!</p>
                     </div>
+
                     <Foodscroller/>
                 </section>
             <Backtop/>
