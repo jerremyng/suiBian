@@ -1,8 +1,6 @@
 nav {
     display: flex;
     padding: 5px;
-    /* justify-content: center; */
-    width: 100%;
 }
 
 a img {
@@ -10,6 +8,12 @@ a img {
     height: 90px;
 }
 
+a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+	font-size: x-large;
+}
 
 /* interactivity */
 nav a:hover {
