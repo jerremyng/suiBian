@@ -9,7 +9,7 @@ export const Searchbar = () => {
   const changeHandler = e => {
     setQuery(e.target.value);
   }
-  //dd
+  //ddn
 
   // function for search by string
   const search = async(e) => {
