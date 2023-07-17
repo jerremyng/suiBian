@@ -1,7 +1,7 @@
 import '../Styles/card.css';
 import React, {useState} from 'react';
 import Modal from './Modal'
-import Slider from './Slider';
+//import Slider from './Slider';
 
 export default function Card({foo}) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function Card({foo}) {
           <h3 className="med"> {foo["address"]["buildingName"]} </h3>
         </div>
 
-        <Slider slides={foo['images']}/>
+        {/* <Slider slides={foo['images']}/> */}
 
         <p>{foo["description"].substring(0,100) + "..."}</p>
 

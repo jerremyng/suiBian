@@ -6,6 +6,8 @@ import "../Styles/Searchbar.css";
 import { Searchbar } from "../components/Searchbar";
 import Backtop from "../components/Backtop.js"
 import { Foodscroller } from '../components/Foodscroller.js';
+import Searchbar2 from '../components/Searchbar2.js';
+
 export default function Home() {
 
     var user = fireBaseAuth.currentUser;
@@ -23,6 +25,7 @@ export default function Home() {
                         style={{ height: 250 }}/>
                 </div>
                 <Searchbar/>
+                <Searchbar2/>
             </section>        
 
                 <section id='discover'>
