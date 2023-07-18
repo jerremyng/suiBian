@@ -1,5 +1,5 @@
 import { fireBaseAuth } from '../firebase.js'
-import Navbar from '../components/Navbar.js';
+import Navbar from '../components/NavBar.js';
 import React, { useState } from 'react';
 import "../Styles/home.css";
 import "../Styles/Searchbar.css";
