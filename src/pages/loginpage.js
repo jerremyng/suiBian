@@ -1,5 +1,5 @@
 import Login from '../components/Login.js';
-import Navbar from '../components/Navbar.js';
+import Navbar from '../components/Bar.js';
 import "../Styles/main.css";
 
 export default function Loginpage() {
