@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/about.css";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Bar";
 import { FaBookmark } from "react-icons/fa";
 // import ReactCardSlider from 'react-card-slider-component';
 

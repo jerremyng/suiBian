@@ -44,7 +44,7 @@ class Searchbar2 extends Component {
         let place = this.state.searchResults.find(p => p.id === key);
             this.setState({
             selectedPlace: place
-        });
+        })
     }
       
       
@@ -71,7 +71,8 @@ class Searchbar2 extends Component {
                 dist: result.dist,
                 value: result.poi.name
               })).sort((a, b) => a.dist - b.dist)}
-              onSelect={place => this.setPlace(place.key)}
+              onSelect={place => console.log(place)}
+                // this.setPlace(place.key)}
               autoFocus={true}
               onChange={query => this.onSearchChange(query)}
               fuseConfigs={{

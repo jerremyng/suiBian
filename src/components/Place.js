@@ -10,9 +10,9 @@ export default class Place extends Component {
             {this.props.data.poi.classifications[0].code} |{(this.props.data.dist / 1000).toFixed(2)} km away
           </h3>
           <p>
-            {this.props.data.address.streetNumber} {this.props.data.address.streetName}
+            {this.props.data.address.streetNumber + ' ' + this.props.data.address.streetName}
             <br />
-            {this.props.data.address.municipality} + ', '+ {this.props.data.address.countrySubdivision}  + ' '+ {this.props.data.address.postalCode}
+            {this.props.data.address.municipality + ', ' + this.props.data.address.countrySubdivision  + ' ' +  this.props.data.address.postalCode}
           </p>
         </div>
       );
