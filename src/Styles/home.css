@@ -83,3 +83,14 @@ img {
     cursor: pointer;
 
   }
+
+h5 {
+    font-size: large;
+    font-family: Calistoga;
+    color: #2f9462;
+}
+
+h6 {
+    font-size: medium;
+    color: #28282B;
+}

@@ -25,7 +25,7 @@ export default function Home() {
                         style={{ height: 250 }}/>
                 </div>
                 <Searchbar/>
-                <Searchbar2/>
+                {/* <Searchbar2/> */}
             </section>        
 
                 <section id='discover'>

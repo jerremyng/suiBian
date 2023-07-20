@@ -1,26 +1,43 @@
+// import React from "react";
+// import '../Styles/modal.css';
+
+// export default function Modal({setOpenModal, foo}) {
+//   return (
+//     <div className="modal" style={{backgroundImage:`/Users/yerremy/Desktop/suiBian/src/assets/acai.jpeg`}}>
+//         <div className="title">
+//           <h1>{foo["name"]}</h1>
+//         </div>
+//         <div className="body">
+//           <p>{foo["body"]}</p>
+//         </div>
+//       </div>
+//   );
+// }
+
 import React from "react";
 import '../Styles/modal.css';
 
-export default function Modal({setOpenModal, foo}) {
+function Modal({ setOpenModal }) {
   return (
-    <div className="modal" style={{backgroundImage:`/Users/yerremy/Desktop/suiBian/src/assets/acai.jpeg`}}>
-        {/* <div className="titleCloseBtn"> */}
-          {/* <button
+    <div className="modalBackground">
+      <div className="modalContainer">
+        <div className="titleCloseBtn">
+          <button
             onClick={() => {
               setOpenModal(false);
             }}
           >
             X
-          </button> */}
-        {/* </div> */}
+          </button>
+        </div>
         <div className="title">
-          <h1>{foo["name"]}</h1>
+          <h1>Are You Sure You Want to Continue?</h1>
         </div>
         <div className="body">
-          <p>{foo["body"]}</p>
+          <p>The next page looks amazing. Hope you want to go there!</p>
         </div>
-        {/* <div className="footer"> */}
-          {/* <button
+        <div className="footer">
+          <button
             onClick={() => {
               setOpenModal(false);
             }}
@@ -28,8 +45,11 @@ export default function Modal({setOpenModal, foo}) {
           >
             Cancel
           </button>
-          <button>Continue</button> */}
-        {/* </div> */}
+          <button>Continue</button>
+        </div>
       </div>
+    </div>
   );
 }
+
+export default Modal;
