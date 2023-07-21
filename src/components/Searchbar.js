@@ -86,13 +86,12 @@ export const Searchbar = () => {
           Search
         </button>
       </form>
-      <button className='lucky' onClick={randomPlace}>Feeling lucky?</button>
+      {/* <button className='lucky' onClick={randomPlace}>Feeling lucky?</button> */}
       </div>
       <div id="tags-box">
         <label>Family
             <input type="checkbox" />
         </label>
-
         <label>Couple
             <input type="checkbox" />
         </label>
@@ -109,9 +108,9 @@ export const Searchbar = () => {
     </div>
 
     <div className='locationList'>
-      {food.map(locationData => {
+      {food ? (food.length > 0 ? food.map(locationData => {
         return <Card foo = {locationData}/>;
-      })}
+      }) :  <h1>No results found</h1>) : <h1>Type to search</h1>}
     </div> 
 
     </>
