@@ -19,3 +19,12 @@ a {
 nav a:hover {
 	color: var(--secondaryColor);
 }
+
+.profile-img {
+	border-radius: 50%;
+    width: 60px;
+    height: 60px;
+	background-color: red;
+	padding: 30px;
+	margin: 30px;
+}

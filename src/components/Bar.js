@@ -1,10 +1,16 @@
+import { fireBaseAuth } from '../firebase.js'
 import { useRef, useState} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
 import "../Styles/Navbar.css";
 
+export default function Navbar() { 
 
-function Navbar() { 
+	var user = fireBaseAuth.currentUser;
+	if (user != null) {
+		var photo = user.photoURL;
+	}
+
 	const navRef = useRef();
 	const showNavbar = () => {
 		navRef.current.classList.toggle(
@@ -16,26 +22,28 @@ function Navbar() {
 		<header>
 			<nav ref={navRef}>
 				<a href="/#">
-					<img src={require("../assets/logo2.png")} alt="Coding Beauty logo"></img>
+					<img src={require("../assets/logo2.png")} alt="Logo"></img>
 				</a>
 				<a href="/login">Sign-In</a>
 				<a href="/">Home</a>
 				<a href="/#">Saved</a>
 				<a href="/#">SG-lossary</a>
-				<button
+
+				{/* <button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
 					<FaTimes />
-				</button>
+				</button> */}
 			</nav>
-			<button
+
+			<img className='profile-img' src={(photo)} />
+
+			{/* <button
 				className="nav-btn"
 				onClick={showNavbar}>
 				<FaBars />
-			</button>
+			</button> */}
 
 		</header>
 	);
 }
-
-export default Navbar;
