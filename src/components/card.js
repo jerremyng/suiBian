@@ -41,7 +41,9 @@ export default function Card({foo}) {
           {foo["tags"].map(tag => {return (<li>{tag}</li>)})}
         </ul>
 
-        <p>Rating: {foo["rating"]} ({Object.keys(foo['reviews']).length == 0 ? "No" : Object.keys(foo['reviews']).length} reviews)</p>
+        <p>
+          {/* Rating: {foo["reviews"] ? foo["reviews"] : "None for now"} */}
+        </p> 
         <Button onClick={handleOpen}>Find out more</Button>
           <Modal
             open={open}
