@@ -19,3 +19,21 @@ a {
 nav a:hover {
 	color: var(--secondaryColor);
 }
+
+.profile-img {
+	border-radius: 50%;
+    width: 60px;
+    height: 60px;
+	padding: 30px;
+	margin: 30px;
+}
+
+.profile a {
+	font-size:larger;
+	color: #2f9462;
+	padding-right: 20px;
+}
+
+.profile a:hover {
+	background-color: #f0dfa7;
+}

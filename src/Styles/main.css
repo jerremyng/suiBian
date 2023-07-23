@@ -20,7 +20,7 @@
 }
 
 header {
-	display: block;
+	display: flex;
 	align-items: center;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: medium;

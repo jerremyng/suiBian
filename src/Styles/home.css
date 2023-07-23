@@ -40,18 +40,9 @@ h2 {
 .dont {
     font-family: 'Calistoga';
     font-size: xx-large;
-    /* margin-left: 210px; */
     letter-spacing: 3px;
     font-size: 55px;
     margin-top: 100px;
-
-    /* justify-content: center; */
-    /* text-align: center; */
-    /* vertical-align: middle; */
-    /* position: relative;  
-    top: 50%;  
-    left: 50%; */
-    /* display: inline; */
 }
 
 img {
