@@ -21,7 +21,6 @@ export default function Navbar() {
 				<a href="/#">
 					<img src={require("../assets/logo2.png")} alt="Logo"></img>
 				</a>
-				<a href="/login">Sign-In</a>
 				<a href="/">Home</a>
 				<a href="/#">Saved</a>
 				<a href="/#">SG-lossary</a>
@@ -60,17 +59,10 @@ function Profile() {
 		}
 	  });
 
-	// useEffect(() => {
-	// 	setPhotoURL(currentUser.photoURL);
-	// 	console.log(photoURL);
-	// 	}
-	// 	, [currentUser])
-
-	// console.log(photoURL);
 	return(
 		<div className='profile'>
 			<img className='profile-img' src={photoURL} alt="profile pic" />
-			<h5>{name}</h5>
+			<a href='/login'>{name}</a>
 		</div>
 	);
 

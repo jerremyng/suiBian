@@ -28,6 +28,12 @@ nav a:hover {
 	margin: 30px;
 }
 
-.profile {
+.profile a {
+	font-size:larger;
+	color: #2f9462;
 	padding-right: 20px;
+}
+
+.profile a:hover {
+	background-color: #f0dfa7;
 }
