@@ -100,3 +100,8 @@
 #tags-box input {
   width: 50px;
 }
+
+.results-status {
+  text-transform: none;
+  color: #191516;
+}

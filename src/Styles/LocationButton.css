@@ -1,0 +1,31 @@
+.location-button {
+    justify-content: center;
+    background-color:#A3320B;
+    color: #fff;
+    font-family: 'Source Sans Pro', Times, serif; 
+    font-size: x-large;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.location-results {
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.none {
+    font-size: x-large;
+}
+
+
+ul {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    justify-content: center;
+}

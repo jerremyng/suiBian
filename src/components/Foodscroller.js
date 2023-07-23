@@ -37,8 +37,8 @@ export const Foodscroller = ({foodData}) => {
   }
 
   return (
+    <><button className='scroller-button' onClick={randomPlace}>Feeling lucky?</button>
     <ul>
-        <button className='lucky' onClick={randomPlace}>Feeling lucky?</button>
         {food.map(locationData => {
           return (
           <li>
@@ -46,6 +46,6 @@ export const Foodscroller = ({foodData}) => {
           </li>
           );
         })}
-    </ul>
+    </ul></>
   );
 }

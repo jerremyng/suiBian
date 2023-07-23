@@ -22,7 +22,7 @@ export default function Home() {
                     ? <h2>Let Suibian be your guide</h2> 
                     : <h2>Welcome Back {user.email}</h2>}
                 <div className='section-title'>
-                    <h2 className='dont'>Whats for Lunch?</h2>
+                    <h2 className='dont'>What's for Lunch?</h2>
                     <img src={require("../assets/smol.png")}
                         style={{ height: 250 }}/>
                 </div>
@@ -38,8 +38,12 @@ export default function Home() {
 
                     <Foodscroller/>
                 </section>
-            <Banner/>
-            <LocationButton/>
+            <div className='location-bonkey'>
+                <h2>Find places near you</h2>
+                <Banner/>
+                <LocationButton/>
+            </div>
+            
             <Backtop/>
             
         </>

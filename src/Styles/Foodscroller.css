@@ -1,13 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
 ul {
-    width: 100%;
-    display: flex;
+    width: 90%;
     overflow-x: scroll;
     overflow-y: hidden;
     gap: 25px;
-    justify-content: center;
+    justify-content: left;
+    
 }
 
-.lucky {
+.scroller-button {
     justify-content: center;
+    background-color:#2f9462;
+    color: #fff;
+    font-family: 'Source Sans Pro', Times, serif; 
+    font-size: x-large;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 10px;
+    margin: 10px;
+
 }
 

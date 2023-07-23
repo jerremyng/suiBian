@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from "../components/card";
-import "../Styles/Foodscroller.css";
+import "../Styles/LocationButton.css";
 
 
 export default class LocationButton extends Component {
@@ -12,6 +12,7 @@ export default class LocationButton extends Component {
             geoError: null,
             searchResults: [],
             food: [],
+            click: false,
         };
     }
     componentDidMount() {
@@ -41,7 +42,8 @@ export default class LocationButton extends Component {
       console.log(data);
       console.log(data.data);
       this.setState({
-        food: data.data // Update the state with the fetched data
+        food: data.data,
+        click: true// Update the state with the fetched data
       });      
       console.log(this.state.food);
       console.log(this.state.food.length);
@@ -49,24 +51,24 @@ export default class LocationButton extends Component {
     catch(e){
       console.log(e);
     }
-
   }
 
+
     render() {
-            return (<ul>
-                        <button className='lucky' onClick={() =>this.randomPlace()}>
-                            Generate by location
-                        </button>
-                        {this.state.food ? (this.state.food.length > 0 ? this.state.food.map(
-                            locationData => {
-                                return (
-                                <li>
-                                  <Card foo = {locationData}/>
-                                </li>
-                                );
-                              }
-                        ) :  <h1>No results found</h1>) : <h1>Click the button to generate!</h1>}
-                    </ul>
+            return (<><button className='location-button' onClick={() => this.randomPlace()}>
+                        Generate by location
+                    </button>
+                    <ul>                
+                      {(this.state.food && this.state.click) ? (this.state.food.length > 0 ? this.state.food.map(
+                      locationData => {
+                      return (
+                        <li>
+                          <Card foo={locationData} />
+                        </li>
+                      );
+                    }
+                  ) : <p className='none'>No results found</p>) : <p className='none'>Click the button to generate!</p>}
+              </ul></>
             );
                     
     }

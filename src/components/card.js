@@ -14,7 +14,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 600,
   bgcolor: 'background.paper',
   backgroundColor: '#FDF5DC',
   border: '4px solid #A72608',
@@ -34,17 +34,12 @@ export default function Card({foo}) {
           <h3> {foo["name"]} </h3>
           <h3 className="med"> {foo["address"]["buildingName"]} </h3>
         </div>
-
-        {/* <p>{foo["description"].substring(0,100) + "..."}</p> */}
-
         <ul className='tags'>
-          {foo["tags"].map(tag => {return (<li>{tag}</li>)})}
+          {foo["tags"].map(tag => {return (<li key={foo["name"]}>{tag}</li>)})}
         </ul>
 
-        <p>
-          {/* Rating: {foo["reviews"] ? foo["reviews"] : "None for now"} */}
-        </p> 
-        <Button onClick={handleOpen}>Find out more</Button>
+        <p className='rating'> Rating: {foo["rating"]} </p> 
+        <Button onClick={handleOpen} className='findoutmore'>Find out more</Button>
           <Modal
             open={open}
             onClose={handleClose}
@@ -67,6 +62,14 @@ export default function Card({foo}) {
               <h6>
                 Ammenities: {foo["ammenities"] ? foo["ammenities"] : "NIL"}
               </h6>
+              <div className='reviews'>
+              <p className='reviews-heading'>
+                Reviews : 
+                {foo["reviews"] 
+                ? foo["reviews"].map(review => 
+                  {return <><p className='reviews-per'>"{review["text"]}" </p><p className='reviews-author'>by {review["authorName"]}</p></>})
+                : <p className='reviews-per'>No reviews found</p>}
+              </p></div>
             </Box>
           </Modal>
       </div>
