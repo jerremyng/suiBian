@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import noAcc from '../assets/no_acc.png'
 import "../Styles/main.css";
 import "../Styles/Navbar.css";
+import sglossary from "../pages/sglossary";
 
 export default function Navbar() { 
 
@@ -23,7 +24,10 @@ export default function Navbar() {
 				</a>
 				<a href="/">Home</a>
 				<a href="/#">Saved</a>
-				<a href="/#">SG-lossary</a>
+
+				<a href="/sglossary">SG-lossary</a>
+				<button
+
 
 				{/* <button
 					className="nav-btn nav-close-btn"

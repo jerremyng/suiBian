@@ -7,6 +7,8 @@ import { Searchbar } from "../components/Searchbar";
 import Backtop from "../components/Backtop.js"
 import { Foodscroller } from '../components/Foodscroller.js';
 import Searchbar2 from '../components/Searchbar2.js';
+import Banner from '../components/Banner.js';
+import LocationButton from "../components/LocationButton.js";
 
 export default function Home() {
 
@@ -36,6 +38,8 @@ export default function Home() {
 
                     <Foodscroller/>
                 </section>
+            <Banner/>
+            <LocationButton/>
             <Backtop/>
             
         </>

@@ -6,6 +6,7 @@ import React from 'react';
 import Home from './pages/home.js';
 import Loginpage from './pages/loginpage.js';
 import About from './pages/about.js';
+import Sglossary from './pages/sglossary.js';
 
 //components
 import './App.css';
@@ -20,7 +21,7 @@ export default function App() {
           <Route path='/' element={<Navigate to='/home' />} />
           <Route path='/home' element={<Home />} />
           <Route path='login' element={<Loginpage/>} />
-          <Route path="about" element={<About />} />
+          <Route path="sglossary" element={<Sglossary />} />
         </Routes>
       </Router>
 
