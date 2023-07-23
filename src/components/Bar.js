@@ -26,7 +26,6 @@ export default function Navbar() {
 				<a href="/#">Saved</a>
 
 				<a href="/sglossary">SG-lossary</a>
-				<button
 
 
 				{/* <button
