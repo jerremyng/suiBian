@@ -1,0 +1,27 @@
+.horizontal-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .horizontal-nav li {
+    margin-right: 0.1px; /* Adjust the spacing between the hyperlinks */
+  }
+  
+  .horizontal-nav li:last-child {
+    margin-right: 0; /* Remove the margin for the last hyperlink */
+  }
+  
+  .A {
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  .A h4 {
+    color: mediumvioletred;
+  }
+
+  .A p{
+    padding-bottom: 20px;
+  }

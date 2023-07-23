@@ -2,6 +2,7 @@ import { useRef, useState} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
 import "../Styles/Navbar.css";
+import sglossary from "../pages/sglossary";
 
 
 function Navbar() { 
@@ -21,7 +22,7 @@ function Navbar() {
 				<a href="/login">Sign-In</a>
 				<a href="/">Home</a>
 				<a href="/#">Saved</a>
-				<a href="/#">SG-lossary</a>
+				<a href="/sglossary">SG-lossary</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
