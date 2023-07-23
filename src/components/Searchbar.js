@@ -108,9 +108,9 @@ export const Searchbar = () => {
     </div>
 
     <div className='locationList'>
-      {food ? (food.length > 0 ? food.map(locationData => {
+      {(food  && query) ? (food.length > 0 ? food.map(locationData => {
         return <Card foo = {locationData}/>;
-      }) :  <h1>No results found</h1>) : <h1>Type to search</h1>}
+      }) :  <h1 className='results-status'>No results found</h1>) : <h1 className='results-status'>Type to search</h1>}
     </div> 
 
     </>

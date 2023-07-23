@@ -88,9 +88,16 @@ h5 {
     font-size: large;
     font-family: Calistoga;
     color: #2f9462;
+
 }
 
 h6 {
     font-size: medium;
     color: #28282B;
+}
+
+.location-bonkey {
+    margin-top: 10px;
+    border-top: dotted 2px #28282B;
+    padding-top: 20px;
 }
