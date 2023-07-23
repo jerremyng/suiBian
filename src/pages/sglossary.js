@@ -66,6 +66,12 @@ export default function Sglossary() {
             <h4>Char Kway Teow : </h4><p>Fried flat rice flour noodles. The dish is stir-fried with soy sauce and common ingredients include eggs, slices of Chinese sausage, cockles and fishcakes.</p>
             <h4>Char Siew : </h4><p>Roasted seasoned pork which is sweet and savory and sliced into thin pieces.  Char Siew is usually served with with steamed white rice or noodles.</p>
         </div>
+
+        <div className='A' id="D">
+          <h2>D</h2>
+            <h4>Devilled Eggs : </h4><p>Also known as stuffed eggs or angel eggs, are hard-boiled eggs, shelled, cut in half lengthwise, and filled with the egg’s yolk mashed and mixed with other ingredients such as minced herbs, mayonnaise and mustard.</p>
+            <h4>Dolmades :  </h4><p>A Greek appetizer made with grape leaves stuffed with rice, herbs and seasoning.  </p>      
+        </div>
       </div>
 
 
