@@ -16,9 +16,9 @@ export default function Home() {
             <Navbar />
             <section id='find'>
 
-                {/* {user == null 
+                {user == null 
                     ? <h2>Let Suibian be your guide</h2> 
-                    : <h2>Welcome Back {user.email}</h2>} */}
+                    : <h2>Welcome Back {user.email}</h2>}
                 <div className='section-title'>
                     <h2 className='dont'>Whats for Lunch?</h2>
                     <img src={require("../assets/smol.png")}

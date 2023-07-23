@@ -1,22 +1,19 @@
 import { fireBaseAuth } from '../firebase.js'
-import { useRef, useState} from "react";
+import { onAuthStateChanged } from 'firebase/auth';
+import { useRef, useState, useEffect} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import noAcc from '../assets/no_acc.png'
 import "../Styles/main.css";
 import "../Styles/Navbar.css";
 
 export default function Navbar() { 
 
-	var user = fireBaseAuth.currentUser;
-	if (user != null) {
-		var photo = user.photoURL;
-	}
-
 	const navRef = useRef();
-	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsive_nav"
-		);
-	};
+	// const showNavbar = () => {
+	// 	navRef.current.classList.toggle(
+	// 		"responsive_nav"
+	// 	);
+	// };
 
 	return (
 		<header>
@@ -36,7 +33,7 @@ export default function Navbar() {
 				</button> */}
 			</nav>
 
-			<img className='profile-img' src={(photo)} />
+			<Profile />
 
 			{/* <button
 				className="nav-btn"
@@ -46,4 +43,35 @@ export default function Navbar() {
 
 		</header>
 	);
+}
+
+function Profile() {
+	//import user profile pic
+	const [photoURL, setPhotoURL] = useState('../assets/no_acc.png');
+	const [name, setName] = useState('Sign-in');
+
+	onAuthStateChanged(fireBaseAuth, (user) => {
+		if (user) {
+			setPhotoURL(user.photoURL);
+			setName(user.displayName);
+		} else {
+			setPhotoURL(noAcc);
+			setName('Sign-in');
+		}
+	  });
+
+	// useEffect(() => {
+	// 	setPhotoURL(currentUser.photoURL);
+	// 	console.log(photoURL);
+	// 	}
+	// 	, [currentUser])
+
+	// console.log(photoURL);
+	return(
+		<div className='profile'>
+			<img className='profile-img' src={photoURL} alt="profile pic" />
+			<h5>{name}</h5>
+		</div>
+	);
+
 }
